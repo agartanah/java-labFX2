@@ -2,26 +2,19 @@ package org.example.javalabfx2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.input.Dragboard;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.input.TransferMode;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Canvas {
     @FXML
     private StackPane figureContainer;
     @FXML
-    private Label coordX, coordY;
+    private Label cordX, cordY;
 
-    private List<geometry2d.Circle> circles = new ArrayList<>();
-    private List<geometry2d.Rectangle> rectangles = new ArrayList<>();
     private double initialX = 0, initialY = 0;
 
     private final Color[] colors = new Color[] {
@@ -33,7 +26,7 @@ public class Canvas {
         Color.PURPLE, // 6
         Color.AQUA // 7
     };
-    private Random random = new Random();
+    private final Random random = new Random();
 
     @FXML
     public void initialize() {
@@ -60,8 +53,8 @@ public class Canvas {
                 initialX = event.getX();
                 initialY = event.getY();
 
-                coordX.setText("X: " + initialX + " " + circle.getPositionX() + " " + event.getSceneX());
-                coordY.setText("Y: " + initialY + " " + circle.getPositionY() + " " + event.getSceneY());
+                cordX.setText("X: " + initialX + " " + circle.getPositionX() + " " + event.getSceneX());
+                cordY.setText("Y: " + initialY + " " + circle.getPositionY() + " " + event.getSceneY());
 
                 circle.getCircleFX().toFront();
             }
@@ -75,12 +68,11 @@ public class Canvas {
                 circle.setPositionX(circle.getPositionX() + offsetX);
                 circle.setPositionY(circle.getPositionY() + offsetY);
 
-                coordX.setText("X: " + initialX + " " + circle.getPositionX() + " " + event.getSceneX());
-                coordY.setText("Y: " + initialY + " " + circle.getPositionY() + " " + event.getSceneY());
+                cordX.setText("X: " + initialX + " " + circle.getPositionX() + " " + event.getSceneX());
+                cordY.setText("Y: " + initialY + " " + circle.getPositionY() + " " + event.getSceneY());
             }
         });
 
-        circles.add(circle);
         figureContainer.getChildren().add(circle.getCircleFX());
     }
 
@@ -114,8 +106,8 @@ public class Canvas {
                 initialX = event.getX();
                 initialY = event.getY();
 
-                coordX.setText("X: " + initialX + " " + rectangle.getPositionX() + " " + event.getSceneX());
-                coordY.setText("Y: " + initialY + " " + rectangle.getPositionY() + " " + event.getSceneY());
+                cordX.setText("X: " + initialX + " " + rectangle.getPositionX() + " " + event.getSceneX());
+                cordY.setText("Y: " + initialY + " " + rectangle.getPositionY() + " " + event.getSceneY());
 
                 rectangle.getRectangleFX().toFront();
             }
@@ -129,12 +121,10 @@ public class Canvas {
                 rectangle.setPositionX(rectangle.getPositionX() + offsetX);
                 rectangle.setPositionY(rectangle.getPositionY() + offsetY);
 
-                coordX.setText("X: " + initialX + " " + rectangle.getPositionX() + " " + event.getSceneX());
-                coordY.setText("Y: " + initialY + " " + rectangle.getPositionY() + " " + event.getSceneY());
+                cordX.setText("X: " + initialX + " " + rectangle.getPositionX() + " " + event.getSceneX());
+                cordY.setText("Y: " + initialY + " " + rectangle.getPositionY() + " " + event.getSceneY());
             }
         });
-
-        rectangles.add(rectangle);
 
         figureContainer.getChildren().add(rectangle.getRectangleFX());
     }

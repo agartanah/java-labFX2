@@ -18,6 +18,6 @@
         <Button onAction="#drawCircle">Circle</Button>
         <Button onAction="#drawRectangle">Rectangle</Button>
     </HBox>
-    <Label fx:id="coordX">X: 0 0 0</Label>
-    <Label fx:id="coordY">Y: 0 0 0</Label>
+    <Label fx:id="cordX">X: 0 0 0</Label>
+    <Label fx:id="cordY">Y: 0 0 0</Label>
 </VBox>
