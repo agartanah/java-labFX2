@@ -82,8 +82,8 @@ public class Canvas {
 
         circle.setColor(colors[random.nextInt(7)]);
 
-        circle.setPositionX(random.nextInt(901) - 450);
-        circle.setPositionY(random.nextInt(501) - 250);
+        circle.setPositionX(random.nextDouble(figureContainer.getPrefWidth() + 1) - figureContainer.getPrefWidth() / 2);
+        circle.setPositionY(random.nextDouble(figureContainer.getPrefHeight() + 1) - figureContainer.getPrefHeight() / 2);
 
         return circle;
     }
@@ -138,8 +138,8 @@ public class Canvas {
 
         rectangle.setColor(colors[random.nextInt(7)]);
 
-        rectangle.setPositionX(random.nextInt(901) - 450);
-        rectangle.setPositionY(random.nextInt(501) - 250);
+        rectangle.setPositionX(random.nextDouble(figureContainer.getPrefWidth() + 1) - figureContainer.getPrefWidth() / 2);
+        rectangle.setPositionY(random.nextDouble(figureContainer.getPrefHeight() + 1) - figureContainer.getPrefHeight() / 2);
 
         return rectangle;
     }
