@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.javalabfx2.Canvas">
+    <StackPane
+            xmlns:fx="http://javafx.com/fxml"
+            fx:id="figureContainer"
+            prefWidth="900"
+            prefHeight="500"
+            styleClass="full-width-container"/>
+
+    <HBox spacing="300" prefWidth="800" styleClass="buttons-container">
+        <Button onAction="#drawCircle">Circle</Button>
+        <Button onAction="#drawRectangle">Rectangle</Button>
+    </HBox>
+    <Label fx:id="coordX">X: 0 0 0</Label>
+    <Label fx:id="coordY">Y: 0 0 0</Label>
+</VBox>

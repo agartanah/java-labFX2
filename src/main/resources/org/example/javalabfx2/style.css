@@ -1,0 +1,15 @@
+.full-width-container {
+    -fx-background-color: white;
+    -fx-border-width: 2px;
+    -fx-margin-bottom: 100px;
+}
+
+.buttons-container {
+    -fx-display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    -fx-background-color: #000;
+    -fx-text-fill: white;
+}
